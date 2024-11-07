@@ -13,7 +13,7 @@ class HomeController extends Controller
     }
 
     public function show($id){
-        $dragon = Http::get('https://dragonball-api.com/api/characters/' . $id)->json ();
+        $dragon = Http::get('https://dragonball-api.com/api/characters/' . $id)->json ('items');
         return view('welcome', ['drago' => $dragon]);
     }
 }
